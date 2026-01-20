@@ -52,8 +52,6 @@ pipeline {
       steps {
         echo 'Deploy Java project to Kubernetes'
 		bat '''
-		  minikube delete
-		  minikube start
 		  minikube image load ramkumar095/myindiaproj:1.0
           kubectl apply -f deployment.yaml
 		  kubectl apply -f services.yaml
