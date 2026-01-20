@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: indiaproj-service
+spec:
+  selector:
+    app.kubernetes.io/name: indiaproj
+  ports:
+    - protocol: TCP
+      port: 86
+      targetPort: 8080
+  type: NodePort
